@@ -1,6 +1,6 @@
-$${\color{red}Запуск всех автотестов}$$	
+### Запуск всех автотестов
 
-<code style="color : fuchsia">mvn test -Dtest="XClientsBusinessTests, XClientContractTests"<\code>
+mvn test -Dtest="XClientsBusinessTests, XClientContractTests"
 
 ### Запуск ТОЛЬКО проверок из задания
 
