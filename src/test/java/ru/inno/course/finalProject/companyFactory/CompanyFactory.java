@@ -4,16 +4,16 @@ import com.github.javafaker.Faker;
 import ru.inno.course.finalProject.model.Company;
 
 public class CompanyFactory {
-    private Faker faker;
+  private Faker faker;
 
-    public CompanyFactory() {
-        this.faker = new Faker();
-    }
+  public CompanyFactory() {
+    this.faker = new Faker();
+  }
 
-    public Company getRandomCompany() {
-        Company company = new Company();
-        company.setName(faker.company().name());
-        company.setDescription(faker.company().industry());
-        return company;
-    }
+  public Company getRandomCompany() {
+    Company company = new Company();
+    company.setName(faker.company().name());
+    company.setDescription(faker.company().industry());
+    return company;
+  }
 }
