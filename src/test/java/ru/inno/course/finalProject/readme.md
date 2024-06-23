@@ -1,3 +1,5 @@
+$${\color{red}Red}$$	
+
 ### Запуск всех автотестов
 
 <code style="color : fuchsia">mvn test -Dtest="XClientsBusinessTests, XClientContractTests"<\code>
