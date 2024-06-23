@@ -7,30 +7,6 @@ import java.util.Objects;
 public class Employee {
     private int id;
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public void setBirthdate(String birthdate) {
-        this.birthdate = birthdate;
-    }
-
     public boolean isActive() {
         return isActive;
     }
@@ -47,33 +23,6 @@ public class Employee {
     private String birthdate;
 
     private boolean isActive = true;
-
-    public String getCreateDateTime() {
-        return createDateTime;
-    }
-
-    public void setCreateDateTime(String createDateTime) {
-        this.createDateTime = createDateTime;
-    }
-
-    private String createDateTime;
-
-    public String getLastChangedDateTime() {
-        return lastChangedDateTime;
-    }
-
-    public void setLastChangedDateTime(String lastChangedDateTime) {
-        this.lastChangedDateTime = lastChangedDateTime;
-    }
-
-    public String getAvatar_url() {
-        return avatar_url;
-    }
-
-    public void setAvatar_url(String avatar_url) {
-        this.avatar_url = avatar_url;
-    }
-
     private String lastChangedDateTime;
     private String avatar_url;
 
@@ -101,6 +50,56 @@ public class Employee {
         this.email = email;
         this.phone = phone;
         this.isActive = isActive;
+    }
+
+    public String getCreateDateTime() {
+        return createDateTime;
+    }
+
+    public void setCreateDateTime(String createDateTime) {
+        this.createDateTime = createDateTime;
+    }
+
+    private String createDateTime;
+
+    public String getLastChangedDateTime() {
+        return lastChangedDateTime;
+    }
+
+    public void setLastChangedDateTime(String lastChangedDateTime) {
+        this.lastChangedDateTime = lastChangedDateTime;
+    }
+
+    public String getAvatar_url() {
+        return avatar_url;
+    }
+
+    public void setAvatar_url(String avatar_url) {
+        this.avatar_url = avatar_url;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setBirthdate(String birthdate) {
+        this.birthdate = birthdate;
     }
 
     public String getFirstName() {

@@ -31,7 +31,7 @@ public class TestResultNotificator implements TestWatcher, AfterAllCallback {
         Map<TestResultStatus, Long> summary = testResultsStatus.stream()
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         LOG.info("Test results for {} {}", context.getDisplayName(), summary.toString());
-        String text = String.format("Test result summary for %s %s", context.getDisplayName(), summary.toString()
+        String text = String.format("Test results for %s %s", context.getDisplayName(), summary.toString()
                         .replaceAll("\\{", ""))
                 .replaceAll("}", "");
         String uri = String.format(PropsHelper.getTelegramUrl(), text);
