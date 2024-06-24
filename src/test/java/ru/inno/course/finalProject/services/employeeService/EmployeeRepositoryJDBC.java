@@ -1,4 +1,4 @@
-package ru.inno.course.finalProject.EmployeeService;
+package ru.inno.course.finalProject.services.employeeService;
 
 import java.sql.*;
 import org.postgresql.util.PSQLException;

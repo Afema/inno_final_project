@@ -1,4 +1,4 @@
-package ru.inno.course.finalProject.EmployeeService;
+package ru.inno.course.finalProject.services.employeeService;
 
 import java.sql.SQLException;
 import ru.inno.course.finalProject.model.Employee;

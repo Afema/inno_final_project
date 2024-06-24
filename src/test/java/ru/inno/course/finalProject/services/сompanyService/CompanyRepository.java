@@ -1,4 +1,4 @@
-package ru.inno.course.finalProject.CompanyService;
+package ru.inno.course.finalProject.services.сompanyService;
 
 import java.sql.SQLException;
 import ru.inno.course.finalProject.model.Company;

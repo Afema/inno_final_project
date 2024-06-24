@@ -1,4 +1,4 @@
-package ru.inno.course.finalProject;
+package ru.inno.course.finalProject.tests;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
@@ -11,17 +11,17 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
-import ru.inno.course.finalProject.CompanyService.CompanyRepository;
-import ru.inno.course.finalProject.CompanyService.CompanyRepositoryJDBC;
-import ru.inno.course.finalProject.EmployeeService.EmployeeRepository;
-import ru.inno.course.finalProject.EmployeeService.EmployeeRepositoryJDBC;
-import ru.inno.course.finalProject.companyFactory.CompanyFactory;
-import ru.inno.course.finalProject.employeeFactory.EmployeeFactory;
 import ru.inno.course.finalProject.helpers.PropsHelper;
 import ru.inno.course.finalProject.model.AdminUser;
 import ru.inno.course.finalProject.model.Company;
 import ru.inno.course.finalProject.model.Employee;
 import ru.inno.course.finalProject.notificator.TestResultNotificator;
+import ru.inno.course.finalProject.services.companyFactory.CompanyFactory;
+import ru.inno.course.finalProject.services.employeeFactory.EmployeeFactory;
+import ru.inno.course.finalProject.services.employeeService.EmployeeRepository;
+import ru.inno.course.finalProject.services.employeeService.EmployeeRepositoryJDBC;
+import ru.inno.course.finalProject.services.сompanyService.CompanyRepository;
+import ru.inno.course.finalProject.services.сompanyService.CompanyRepositoryJDBC;
 
 @ExtendWith(TestResultNotificator.class)
 public class XClientsBusinessTests {
@@ -304,14 +304,14 @@ public class XClientsBusinessTests {
     int idCompany = createNewCompanyApi(companyFactory.getRandomCompany());
     Employee employeeAPI = employeeFactory.getRandomEmployee(idCompany);
     int idEmployee = createNewEmployeeApi(employeeAPI);
+    employeeIdsToDelete = new int[] {idEmployee};
+    companyIdsToDelete = new int[] {idCompany};
 
     Employee employeeDb = employeeRepository.getEmployeeByIdDB(idEmployee);
+
     assertEquals(idEmployee, employeeDb.getId());
     assertEquals(employeeAPI.getFirstName(), employeeDb.getFirstName());
     assertTrue(employeeDb.getIsActive());
-
-    employeeIdsToDelete = new int[] {idEmployee};
-    companyIdsToDelete = new int[] {idCompany};
   }
 
   @Test

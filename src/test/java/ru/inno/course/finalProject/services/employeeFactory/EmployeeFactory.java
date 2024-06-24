@@ -1,4 +1,4 @@
-package ru.inno.course.finalProject.employeeFactory;
+package ru.inno.course.finalProject.services.employeeFactory;
 
 import com.github.javafaker.Faker;
 import ru.inno.course.finalProject.model.Employee;
