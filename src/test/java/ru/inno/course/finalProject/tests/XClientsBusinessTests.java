@@ -236,17 +236,6 @@ public class XClientsBusinessTests {
     int idCompany = createNewCompanyApi(companyFactory.getRandomCompany());
     Employee employee = employeeFactory.getRandomEmployee(idCompany);
     int idEmployee = createNewEmployeeApi(employee);
-
-    List<Employee> employees =
-        given()
-            .when()
-            .get(PropsHelper.getEmployeeUrl() + "?company=" + idCompany)
-            .then()
-            .extract()
-            .body()
-            .jsonPath()
-            .getList(".", Employee.class);
-
     employee.setActive(false);
 
     given()

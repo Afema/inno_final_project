@@ -29,13 +29,15 @@ public class Employee {
       int companyId,
       String email,
       String phone,
-      boolean isActive) {
+      boolean isActive,
+      String birthdate) {
     this.firstName = firstName;
     this.middleName = middleName;
     this.lastName = lastName;
     this.companyId = companyId;
     this.email = email;
     this.phone = phone;
+    this.birthdate = birthdate;
     this.isActive = isActive;
   }
 
@@ -152,6 +154,8 @@ public class Employee {
   public void setActive(boolean active) {
     isActive = active;
   }
+
+  public void compare(Employee e) {}
 
   @Override
   public boolean equals(Object o) {

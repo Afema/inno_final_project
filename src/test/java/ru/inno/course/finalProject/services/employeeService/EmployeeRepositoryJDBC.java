@@ -45,7 +45,8 @@ public class EmployeeRepositoryJDBC implements EmployeeRepository {
               resultSet.getInt("company_id"),
               resultSet.getString("email"),
               resultSet.getString("phone"),
-              resultSet.getBoolean("is_active"));
+              resultSet.getBoolean("is_active"),
+              resultSet.getString("birthdate"));
       employee.setId(resultSet.getInt("id"));
       connection.close();
       return employee;
